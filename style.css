@@ -75,12 +75,6 @@ main {
     align-items: center;
 }
 
-.about {
-    text-align: center;
-    padding: 40px 40px 40px 40px;
-    border-bottom:  .5px solid #f7f7f7;
-}
-
 .parent-tile{
      display:flex;
      flex-direction:row;
@@ -192,12 +186,25 @@ footer {
     
     }
 
+    .title {
+        font-size: 15px;
+    }
+
     header {
         grid-row: 1 / span 1;
         grid-column: 1 / span 3;
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;  
+    }
+
+    .menu {
+        grid-row: 1;
+        grid-column: 2;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-columns: 4fr 2fr 2fr 3fr 2fr 9fr 1fr;*/
     }
         
 }
