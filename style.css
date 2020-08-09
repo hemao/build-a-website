@@ -1,6 +1,6 @@
-* {
-    box-sizing: border-box;
-}
+* { 
+    box-sizing: border-box; 
+} 
 
 body {
     height: 100vh;
@@ -12,11 +12,11 @@ body {
 }
 
 header {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 1;
     grid-column: 1 / span 3;
     display: grid;
     grid-template-rows: 100px 200px;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 100px 1fr 100px;  
 }
 
 .menu {
@@ -28,16 +28,15 @@ header {
 }
 
 .banner {
-    grid-row: 2 / span 1;
+    grid-row: 2;
     grid-column: 1 / span 3;
 }
 
-.bannerpic{
-    width: 100%;
-    height: 100%;
+.banner > img {
     object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
-
 
 a {
     color: black;
@@ -56,13 +55,13 @@ a {
     grid-row: 3;
     grid-column: 1;
 }
-
-
+  
+  
 .right {
     grid-row: 3;
     grid-column: 3;
 }
-
+ 
 main {
     grid-row: 3;
     grid-column: 2;
@@ -70,13 +69,13 @@ main {
     align-items: center;
 }
 
-.sometext {
+.about {
     text-align: center;
     padding: 40px 40px 40px 40px;
     border-bottom:  .5px solid #f7f7f7;
 }
 
-.tiles{
+.parent-tile{
      display:flex;
      flex-direction:row;
      justify-content: center;
@@ -84,25 +83,16 @@ main {
      border-bottom:  .5px solid #f7f7f7;
  }
 
-.tile {
+.child-tile {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-content: space-around;
-
 }
 
-.tile1 {
-   padding: 20px;
-}
-
-.tile2 {
+.tile {
     padding: 20px;
-}
-
-.tile3 {
-    padding: 20px;
-}
+ }
 
 .tilepic {
     width: 100%;
@@ -116,8 +106,7 @@ button {
     border: 2px solid #555555;
     padding: 10px;
     border-radius: 4px;
-  }
-
+}
 
 .parent {
     display: grid;
@@ -138,7 +127,7 @@ button {
 
 .child-two {
     grid-row: 2 / span 2;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 2; 
 }
 
 .child-three {
@@ -162,6 +151,12 @@ button {
     grid-column: 4;
 }
 
+.child-two > img, .child-three > img, .child-four > img, .child-five > img, .child-six > img {
+    object-fit: fill;
+    width: 100%;
+    max-height: 100%;
+  }
+
 hr {
     border: .5px solid #f7f7f7;
 }
@@ -171,9 +166,41 @@ footer {
     grid-column: 1 / span 3;
 }
 
-.social {
+.social {      
     display:flex;
     flex-direction:row;
     justify-content: center;
-
 }
+
+@media only screen and (max-width: 700px) {
+
+   .parent-tile, .parent{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-content: space-around;
+    
+    }
+
+    header {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 3;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;  
+    }
+
+    .about {
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        border-bottom:  .5px solid #f7f7f7;
+    }
+
+    .banner > img {
+        object-fit: fill;
+    }
+
+  }
+
+
