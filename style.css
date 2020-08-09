@@ -51,6 +51,10 @@ a {
     text-align: center;
  }
 
+.title {
+    font-size: larger;
+}
+
 
 .left {
     grid-row: 3;
@@ -171,6 +175,10 @@ footer {
     display:flex;
     flex-direction:row;
     justify-content: center;
+}
+
+.icon {
+    padding: 10px;
 }
 
 @media only screen and (max-width: 700px) {
